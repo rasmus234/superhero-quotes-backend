@@ -8,7 +8,7 @@ var host = new HostBuilder()
     .ConfigureFunctionsWorkerDefaults()
     .Build();
 
-//read the quotes.json file and deserialize it to a list of Quote objects with system.text.json
+//read the quotes.json file and deserialize it to a list of Quote objects with system.text.json. only for demonstration purposes and only works locally
 var quoteDtos = JsonSerializer.Deserialize<List<GetQuoteDto>>(File.ReadAllText("quotes.json"));
 var quotes = quoteDtos.Select(quoteDto => new Quote
 {

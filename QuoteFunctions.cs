@@ -58,6 +58,7 @@ namespace LocalFunctionProj
                 _logger.LogError(e, "Error");
                 return req.CreateResponse(HttpStatusCode.InternalServerError);
             }
+            
         }
     }
 }
